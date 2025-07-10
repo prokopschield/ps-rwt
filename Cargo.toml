@@ -1,0 +1,15 @@
+[package]
+name = "ps-rwt"
+version = "0.1.0-0"
+edition = "2021"
+description = "Generic struct with readonly and writable parts."
+license = "GPL-3.0-or-later"
+
+[dependencies]
+parking_lot = { version = "0.12.4", features = ["arc_lock"] }
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+opt-level = 3
