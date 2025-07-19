@@ -1,8 +1,8 @@
 use std::cmp::Ordering::{Equal, Greater, Less};
 
-use crate::RWT;
+use crate::inner::RWTi;
 
-impl<R, W> Ord for RWT<R, W>
+impl<R, W> Ord for RWTi<R, W>
 where
     R: Ord,
     W: Ord,

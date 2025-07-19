@@ -1,11 +1,12 @@
 use std::sync::Arc;
 
-use parking_lot::RwLock;
+use inner::RWTi;
 
 mod implementations;
+mod inner;
 mod methods;
 
+#[derive(Hash, PartialEq, Eq, PartialOrd, Ord)]
 pub struct RWT<R, W> {
-    readonly: Arc<R>,
-    writable: Arc<RwLock<W>>,
+    inner: Arc<RWTi<R, W>>,
 }

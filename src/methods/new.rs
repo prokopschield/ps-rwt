@@ -1,11 +1,11 @@
 use std::sync::Arc;
 
-use parking_lot::RwLock;
-
-use crate::RWT;
+use crate::{inner::RWTi, RWT};
 
 impl<R, W> RWT<R, W> {
     pub fn new(readonly: R, writable: W) -> Self {
-        Self::from_parts(Arc::new(readonly), Arc::new(RwLock::new(writable)))
+        Self {
+            inner: Arc::new(RWTi::new(readonly, writable)),
+        }
     }
 }

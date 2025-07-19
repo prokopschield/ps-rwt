@@ -1,8 +1,8 @@
 use std::cmp::Ordering::{Equal, Greater, Less};
 
-use crate::RWT;
+use crate::inner::RWTi;
 
-impl<R, W> PartialOrd for RWT<R, W>
+impl<R, W> PartialOrd for RWTi<R, W>
 where
     R: PartialOrd,
     W: PartialOrd,

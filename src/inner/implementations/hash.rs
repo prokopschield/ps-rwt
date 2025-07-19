@@ -1,8 +1,8 @@
 use std::hash::Hash;
 
-use crate::RWT;
+use crate::inner::RWTi;
 
-impl<R, W> Hash for RWT<R, W>
+impl<R, W> Hash for RWTi<R, W>
 where
     R: Hash,
     W: Hash,

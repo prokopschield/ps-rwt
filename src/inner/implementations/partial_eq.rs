@@ -1,6 +1,6 @@
-use crate::RWT;
+use crate::inner::RWTi;
 
-impl<R, W> PartialEq for RWT<R, W>
+impl<R, W> PartialEq for RWTi<R, W>
 where
     R: PartialEq,
     W: PartialEq,
